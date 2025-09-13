@@ -39,6 +39,27 @@ items7 = [1,2,3,4,5,6,7,8,9,10]
 print(items7[0])
 print(items7[2])
 print(items7[-1])
-items7[2]=11
+# items7[2]=11
+# print(items7)
+# print(items7[2])
+
+# 如果希望一次性访问列表中的多个元素，我们可以使用切片运算。
+# 切片运算是形如[start:end:stride]的运算符，其中start代表访问列表元素的起始位置，
+# end代表访问列表元素的终止位置（终止位置的元素无法访问），而stride则代表了跨度，
+# 简单的说就是位置的增量，比如我们访问的第一个元素在start位置，
+# 那么第二个元素就在start + stride位置，当然start + stride要小于end。
+# 我们给上面的代码增加下面的语句，来使用切片运算符访问列表元素。
+print(items7[1:5:1])
+print(items7[0:4:2])
+print(items7[-1:-5:-1])
+print(items7[-5:-1:1])
+
+# 如果start值等于0，那么在使用切片运算符时可以将其省略；如果end值等于N，
+# N代表列表元素的个数，那么在使用切片运算符时可以将其省略；如果stride值等于1，
+# 那么在使用切片运算符时也可以将其省略。所以，下面的代码跟上面的代码作用完全相同。
+print(items7[::2])
+print(items7[::])
+print(items7[1:3])
+#还可以通过切片操作修改列表中的元素
+items7[1:3]=['a','b']
 print(items7)
-print(items7[2])
