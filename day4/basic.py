@@ -63,3 +63,13 @@ print(items7[1:3])
 #还可以通过切片操作修改列表中的元素
 items7[1:3]=['a','b']
 print(items7)
+
+'''
+列表的遍历
+'''
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+# for number in numbers:
+#     print(number)
+numbers = [1,2,3,4,5,6,7,8,9,10]
+for index in range(len(numbers)):
+    print(numbers[index])
